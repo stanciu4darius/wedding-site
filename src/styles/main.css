@@ -804,11 +804,70 @@ textarea {
 .location-card__top h3 {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.12;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .location-card__bottom {
   margin-top: 28px;
+}
+
+.location-card__bottom .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  padding: 14px 22px;
+}
+@media (max-width: 640px) {
+  .navbar {
+    padding: 18px 18px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .countdown-card {
+    padding: 24px 18px;
+  }
+
+  .gallery-grid--large,
+  .numbers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-editorial__text,
+  .story-card,
+  .numbers-card,
+  .location-card,
+  .rsvp-card,
+  .photo-upload-card {
+    padding: 22px;
+  }
+
+  .location-card__top {
+    gap: 14px;
+  }
+
+  .location-card__top h3 {
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
+    line-height: 1.08;
+  }
+
+  .location-card__bottom .btn {
+    width: 100%;
+    border-radius: 20px;
+  }
 }
