@@ -15,10 +15,10 @@ export const weddingData = {
     locationLabel: "Beclean, Bistrița-Năsăud",
     heroImages: [
       `${base}images/hero1.jpeg`,
-      "public/images/hero2.jpeg",
-      "public/images/hero3.jpeg",
-      "public/images/hero4.jpeg",
-      "public/images/hero5.jpeg",
+      `${base}images/hero2.jpeg`,
+      `${base}images/hero3.jpeg`,
+      `${base}images/hero4.jpeg`,
+      `${base}images/hero5.jpeg`,
     ]
   },
 
@@ -34,37 +34,37 @@ export const weddingData = {
       time: "07:00",
       title: "Plecarea de la casa mirelui",
       place: "",
-      icon: "public/images/mirele_acasa_la_el.png"
+      icon: `${base}images/mirele_acasa_la_el.png`
     },
     {
       time: "09:00",
       title: "Mirele ajunge la mireasă",
       place: "",
-      icon: "public/images/mireasa_singura.png"
+      icon: `${base}images/mireasa_singura.png`
     },
     {
       time: "09:30",
       title: "Plecarea în Beclean",
       place: "",
-      icon: "public/images/Drum_spre_Beclean.png"
+      icon: `${base}images/Drum_spre_Beclean.png`
     },
     {
       time: "11:30",
       title: "Starea civilă",
       place: "",
-      icon: "public/images/starea_civila.png"
+      icon: `${base}images/starea_civila.png`
     },
     {
       time: "12:00",
       title: "Cununia religioasă",
       place: "Biserica Creștină Penticostală „Sfânta Treime”",
-      icon: "public/images/biserica.png"
+      icon: `${base}images/biserica.png`
     },
     {
       time: "15:00",
       title: "Masa festivă",
       place: "Villa Franca",
-      icon: "public/images/masa_festiva.png"
+      icon: `${base}images/masa_festiva.png`
     }
   ],
 
@@ -136,16 +136,16 @@ export const weddingData = {
   dressCode: {
     title: "Dress Code sugerat",
     text: "Mirii s-ar bucura dacă ați alege ținute în paleta cromatică a nunții. Este un dress code sugerat, nu obligatoriu.",
-    image: "public/images/Dresscode_sugestie.png"
+    image: `${base}images/Dresscode_sugestie.png`
   },
 
   gallery: [
-    "public/images/couple-1.jpeg",
-    "public/images/couple-2.jpeg",
-    "public/images/couple-3.jpeg",
-    "public/images/couple-4.jpeg",
-    "public/images/gallery-1.jpeg",
-    "public/images/couple-5.jpeg"
+    `${base}images/couple-1.jpeg`,
+    `${base}images/couple-2.jpeg`,
+    `${base}images/couple-3.jpeg`,
+    `${base}images/couple-4.jpeg`,
+    `${base}images/gallery-1.jpeg`,
+    `${base}images/couple-5.jpeg`
   ],
 
   uploadPhotos: {
