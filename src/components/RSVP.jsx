@@ -44,7 +44,7 @@ ${senderName || "Invitat"}
       <div className="container">
         <div className="section-heading fade-up">
           <p className="section-kicker">Confirmare</p>
-          <h2>RSVP</h2>
+          <h2>Răspuns la invitație</h2>
           <p>{weddingData.rsvp.deadline}</p>
         </div>
 

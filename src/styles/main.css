@@ -766,3 +766,49 @@ textarea {
     padding: 24px;
   }
 }
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.location-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  height: 100%;
+}
+
+.location-card__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+  height: 100%;
+}
+
+.location-card__top {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.location-card__top p {
+  margin: 0;
+}
+
+.location-card__top h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.location-card__bottom {
+  margin-top: 28px;
+}

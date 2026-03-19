@@ -5,7 +5,7 @@ function Story() {
     <section id="story" className="section">
       <div className="container">
         <div className="section-heading fade-up">
-          <p className="section-kicker">Povestea noastră</p>
+          <p className="section-kicker">Povestea lor</p>
           <h2>{weddingData.story.title}</h2>
         </div>
 
@@ -15,13 +15,13 @@ function Story() {
           </div>
 
           <div className="story-editorial__image">
-            <img src="/images/couple-1.jpeg" alt="Darius și Iazmina" />
+            <img src="public/images/couple-1.jpeg" alt="Darius și Iazmina" />
           </div>
         </div>
 
         <div className="story-split">
           <div className="story-card fade-up">
-            <h3>Lucruri amuzante despre relația noastră</h3>
+            <h3>Lucruri amuzante despre relația lor</h3>
 
             <ul className="elegant-list elegant-list--spaced">
               {weddingData.story.funnyFacts.map((fact) => (
@@ -31,7 +31,7 @@ function Story() {
           </div>
 
           <div className="story-card fade-up">
-            <h3>Povestea noastră, pe scurt</h3>
+            <h3>Date importante</h3>
 
             <div className="milestones">
               {weddingData.story.timeline.map((item) => (

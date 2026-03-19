@@ -16,7 +16,7 @@ export const weddingData = {
       "public/images/hero2.jpeg",
       "public/images/hero3.jpeg",
       "public/images/hero4.jpeg",
-      "public/images/hero5.jpeg"
+      "public/images/hero5.jpeg",
     ]
   },
 
@@ -133,7 +133,7 @@ export const weddingData = {
 
   dressCode: {
     title: "Dress Code sugerat",
-    text: "Ne-am bucura dacă ați alege ținute în paleta cromatică a nunții. Este un dress code sugerat, nu obligatoriu.",
+    text: "Mirii s-ar bucura dacă ați alege ținute în paleta cromatică a nunții. Este un dress code sugerat, nu obligatoriu.",
     image: "public/images/Dresscode_sugestie.png"
   },
 
@@ -142,12 +142,13 @@ export const weddingData = {
     "public/images/couple-2.jpeg",
     "public/images/couple-3.jpeg",
     "public/images/couple-4.jpeg",
-    "public/images/gallery-1.jpeg"
+    "public/images/gallery-1.jpeg",
+    "public/images/couple-5.jpeg"
   ],
 
   uploadPhotos: {
     title: "Albumul invitaților",
-    text: "Am pregătit un album unde puteți încărca fotografii și clipuri surprinse la nunta noastră. Ne-am bucura enorm să păstrăm și perspectiva voastră asupra acestei zile.",
+    text: "Mirii au pregătit un album unde puteți încărca fotografii și clipuri surprinse la nunta noastră. Ne-am bucura enorm să păstrăm și perspectiva voastră asupra acestei zile.",
     link: "https://photos.app.goo.gl/fdzhFX3KF1XPdTob9",
     buttonText: "Încarcă poze și video"
   },
@@ -157,6 +158,6 @@ export const weddingData = {
     groomPhone: "40752112898",
     brideName: "Iazmina Lăuran",
     bridePhone: "40753524966",
-    deadline: "Vă rugăm să ne confirmați prezența cât mai curând."
+    deadline: "Vă rugăm să confirmați prezența cât mai curând."
   }
 }

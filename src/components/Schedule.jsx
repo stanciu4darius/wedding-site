@@ -6,7 +6,7 @@ function Schedule() {
       <div className="container schedule-container-narrow">
         <div className="section-heading fade-up">
           <p className="section-kicker">Programul nunții</p>
-          <h2>Order of Events</h2>
+          <h2>Ordinea evenimentelor</h2>
         </div>
 
         <div className="schedule-invite-list">

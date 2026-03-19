@@ -6,7 +6,7 @@ function Gallery() {
       <div className="container">
         <div className="section-heading fade-up">
           <p className="section-kicker">Galerie</p>
-          <h2>Câteva cadre cu noi</h2>
+          <h2>Câteva cadre cu mirii</h2>
         </div>
 
         <div className="gallery-grid gallery-grid--large">
