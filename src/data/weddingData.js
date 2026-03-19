@@ -12,7 +12,7 @@ export const weddingData = {
     dateLabel: "27 Iunie 2026",
     locationLabel: "Beclean, Bistrița-Năsăud",
     heroImages: [
-      "public/images/hero1.jpeg",
+      "/images/hero1.jpeg",
       "public/images/hero2.jpeg",
       "public/images/hero3.jpeg",
       "public/images/hero4.jpeg",
