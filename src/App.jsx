@@ -8,6 +8,7 @@ import Locations from "./components/Locations"
 import DressCode from "./components/DressCode"
 import Gallery from "./components/Gallery"
 import RSVP from "./components/RSVP"
+import PhotoUpload from "./components/PhotoUpload"
 import Footer from "./components/Footer"
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <DressCode />
       <Gallery />
       <RSVP />
+      <PhotoUpload />
       <Footer />
     </div>
   )

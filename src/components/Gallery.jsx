@@ -6,10 +6,10 @@ function Gallery() {
       <div className="container">
         <div className="section-heading fade-up">
           <p className="section-kicker">Galerie</p>
-          <h2>Câteva imagini cu noi</h2>
+          <h2>Câteva cadre cu noi</h2>
         </div>
 
-        <div className="gallery-grid">
+        <div className="gallery-grid gallery-grid--large">
           {weddingData.gallery.map((image, index) => (
             <div className="gallery-card fade-up" key={image}>
               <img src={image} alt={`Darius și Iazmina ${index + 1}`} />

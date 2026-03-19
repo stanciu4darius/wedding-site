@@ -3,7 +3,7 @@ function Footer() {
     <footer className="footer">
       <div className="container center">
         <p>Darius & Iazmina</p>
-        <p>27 Iunie 2026 • Beclean</p>
+        <p>27 Iunie 2026 • Beclean, Bistrița-Năsăud</p>
       </div>
     </footer>
   )
