@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL
+
 export const weddingData = {
   couple: {
     groom: "Darius",
@@ -12,7 +14,7 @@ export const weddingData = {
     dateLabel: "27 Iunie 2026",
     locationLabel: "Beclean, Bistrița-Năsăud",
     heroImages: [
-      "/images/hero1.jpeg",
+      `${base}images/hero1.jpeg`,
       "public/images/hero2.jpeg",
       "public/images/hero3.jpeg",
       "public/images/hero4.jpeg",
