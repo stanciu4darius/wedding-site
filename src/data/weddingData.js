@@ -145,7 +145,10 @@ export const weddingData = {
     `${base}images/couple-3.jpg`,
     `${base}images/couple-4.jpg`,
     `${base}images/couple-6.jpg`,
-    `${base}images/couple-5.jpg`
+    `${base}images/couple-7.jpeg`,
+    `${base}images/couple-9.jpg`,
+    `${base}images/couple-8.jpeg`,
+    `${base}images/couple-10.jpg`
   ],
 
   uploadPhotos: {
