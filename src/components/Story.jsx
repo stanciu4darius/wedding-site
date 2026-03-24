@@ -15,7 +15,7 @@ function Story() {
           </div>
 
           <div className="story-editorial__image">
-            <img src={`${import.meta.env.BASE_URL}images/couple-1.jpeg`} alt="Darius și Iazmina" />
+            <img src={`${import.meta.env.BASE_URL}images/couple-5.jpg`} alt="Darius și Iazmina" />
           </div>
         </div>
 

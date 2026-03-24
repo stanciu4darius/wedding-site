@@ -14,11 +14,11 @@ export const weddingData = {
     dateLabel: "27 Iunie 2026",
     locationLabel: "Beclean, Bistrița-Năsăud",
     heroImages: [
-      `${base}images/hero1.jpeg`,
-      `${base}images/hero2.jpeg`,
-      `${base}images/hero3.jpeg`,
-      `${base}images/hero4.jpeg`,
-      `${base}images/hero5.jpeg`,
+      `${base}images/hero1.jpg`,
+      `${base}images/hero2.jpg`,
+      `${base}images/hero3.jpg`,
+      `${base}images/hero4.jpg`,
+      `${base}images/hero5.jpg`,
     ]
   },
 
@@ -44,7 +44,7 @@ export const weddingData = {
     },
     {
       time: "09:30",
-      title: "Plecarea în Beclean",
+      title: "Plecarea spre Beclean",
       place: "",
       icon: `${base}images/Drum_spre_Beclean.png`
     },
@@ -63,7 +63,7 @@ export const weddingData = {
     {
       time: "15:00",
       title: "Masa festivă",
-      place: "Villa Franca",
+      place: "Villa Franca, Bistrița",
       icon: `${base}images/masa_festiva.png`
     }
   ],
@@ -128,7 +128,7 @@ export const weddingData = {
       title: "Masa festivă",
       time: "15:00",
       place: "Villa Franca",
-      address: "Str. Calea Dejului, nr. 18, Beclean",
+      address: "Str. Calea Dejului, nr. 18, Bistrița",
       mapsLink: "https://www.google.com/maps/search/?api=1&query=Villa+Franca+Beclean"
     }
   },
@@ -140,12 +140,12 @@ export const weddingData = {
   },
 
   gallery: [
-    `${base}images/couple-1.jpeg`,
-    `${base}images/couple-2.jpeg`,
-    `${base}images/couple-3.jpeg`,
-    `${base}images/couple-4.jpeg`,
-    `${base}images/gallery-1.jpeg`,
-    `${base}images/couple-5.jpeg`
+    `${base}images/couple-1.jpg`,
+    `${base}images/couple-2.jpg`,
+    `${base}images/couple-3.jpg`,
+    `${base}images/couple-4.jpg`,
+    `${base}images/couple-6.jpg`,
+    `${base}images/couple-5.jpg`
   ],
 
   uploadPhotos: {
