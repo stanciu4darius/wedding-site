@@ -1,47 +1,86 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { weddingData } from "../data/weddingData"
 
 function Hero() {
-  const images = weddingData.hero.heroImages
+  const images = useMemo(() => weddingData.hero.heroImages, [])
+  const [loaded, setLoaded] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [loadedImages, setLoadedImages] = useState([])
+  const [nextIndex, setNextIndex] = useState(1)
+  const [isFading, setIsFading] = useState(false)
 
   useEffect(() => {
-    const preloadPromises = images.map((src) => {
-      return new Promise((resolve) => {
-        const img = new Image()
-        img.src = src
-        img.onload = () => resolve(src)
-        img.onerror = () => resolve(src)
-      })
-    })
+    let isMounted = true
 
-    Promise.all(preloadPromises).then((loaded) => {
-      setLoadedImages(loaded)
-    })
+    const preload = async () => {
+      const promises = images.map((src) => {
+        return new Promise((resolve) => {
+          const img = new Image()
+          img.src = src
+          img.onload = () => resolve(src)
+          img.onerror = () => resolve(src)
+        })
+      })
+
+      await Promise.all(promises)
+
+      if (isMounted) {
+        setLoaded(true)
+      }
+    }
+
+    preload()
+
+    return () => {
+      isMounted = false
+    }
   }, [images])
 
   useEffect(() => {
-    if (loadedImages.length === 0) return
+    if (!loaded || images.length < 2) return
 
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % loadedImages.length)
-    }, 4500)
+      const upcomingIndex = (currentIndex + 1) % images.length
+      setNextIndex(upcomingIndex)
+      setIsFading(true)
+
+      setTimeout(() => {
+        setCurrentIndex(upcomingIndex)
+        setIsFading(false)
+      }, 1200)
+    }, 5000)
 
     return () => clearInterval(interval)
-  }, [loadedImages])
+  }, [loaded, currentIndex, images.length])
 
-  const currentImage = loadedImages.length > 0 ? loadedImages[currentIndex] : images[0]
+  function goToSlide(index) {
+    if (index === currentIndex) return
+    setNextIndex(index)
+    setIsFading(true)
+
+    setTimeout(() => {
+      setCurrentIndex(index)
+      setIsFading(false)
+    }, 1200)
+  }
 
   return (
-    <section
-      id="hero"
-      className="hero"
-      style={{
-        backgroundImage: `linear-gradient(rgba(7, 7, 7, 0.34), rgba(7, 7, 7, 0.48)), url(${currentImage})`
-      }}
-    >
+    <section id="hero" className="hero hero--premium">
+      <div
+        className="hero__bg hero__bg--base"
+        style={{
+          backgroundImage: `url(${images[currentIndex]})`
+        }}
+      />
+
+      <div
+        className={`hero__bg hero__bg--next ${isFading ? "hero__bg--visible" : ""}`}
+        style={{
+          backgroundImage: `url(${images[nextIndex]})`
+        }}
+      />
+
       <div className="hero__overlay" />
+      <div className="hero__grain" />
 
       <div className="hero__content container fade-up">
         <p className="eyebrow">{weddingData.hero.subtitle}</p>
@@ -60,7 +99,7 @@ function Hero() {
               key={index}
               type="button"
               className={`hero__dot ${currentIndex === index ? "hero__dot--active" : ""}`}
-              onClick={() => setCurrentIndex(index)}
+              onClick={() => goToSlide(index)}
               aria-label={`Imagine ${index + 1}`}
             />
           ))}
