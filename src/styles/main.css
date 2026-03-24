@@ -950,3 +950,16 @@ textarea {
     border-radius: 20px;
   }
 }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #cfcac2;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.8s ease-in-out;
+  overflow: hidden;
+}

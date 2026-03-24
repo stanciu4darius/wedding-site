@@ -4,21 +4,41 @@ import { weddingData } from "../data/weddingData"
 function Hero() {
   const images = weddingData.hero.heroImages
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [loadedImages, setLoadedImages] = useState([])
 
   useEffect(() => {
+    const preloadPromises = images.map((src) => {
+      return new Promise((resolve) => {
+        const img = new Image()
+        img.src = src
+        img.onload = () => resolve(src)
+        img.onerror = () => resolve(src)
+      })
+    })
+
+    Promise.all(preloadPromises).then((loaded) => {
+      setLoadedImages(loaded)
+    })
+  }, [images])
+
+  useEffect(() => {
+    if (loadedImages.length === 0) return
+
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length)
+      setCurrentIndex((prev) => (prev + 1) % loadedImages.length)
     }, 4500)
 
     return () => clearInterval(interval)
-  }, [images.length])
+  }, [loadedImages])
+
+  const currentImage = loadedImages.length > 0 ? loadedImages[currentIndex] : images[0]
 
   return (
     <section
       id="hero"
       className="hero"
       style={{
-        backgroundImage: `linear-gradient(rgba(7, 7, 7, 0.34), rgba(7, 7, 7, 0.48)), url(${images[currentIndex]})`
+        backgroundImage: `linear-gradient(rgba(7, 7, 7, 0.34), rgba(7, 7, 7, 0.48)), url(${currentImage})`
       }}
     >
       <div className="hero__overlay" />
